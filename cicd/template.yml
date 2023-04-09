@@ -12,6 +12,9 @@ Parameters:
 Resources:
   Bucket:
     Type: AWS::S3::Bucket
+    Properties:
+      WebsiteConfiguration:
+        IndexDocument: /index.html
 
   BucketPolicy:
     Type: AWS::S3::BucketPolicy
@@ -81,8 +84,9 @@ Resources:
         Origins:
           - Id: S3Origin
             OriginAccessControlId: !Ref OriginAccessControl
-            DomainName: !GetAtt Bucket.DomainName
-            S3OriginConfig: {}
+            DomainName: !Sub ${Bucket}.s3-website.us-east-1.amazonaws.com
+            CustomOriginConfig:
+              OriginProtocolPolicy: https-only
         DefaultCacheBehavior:
           CachePolicyId: !Ref CachePolicy
           Compress: false

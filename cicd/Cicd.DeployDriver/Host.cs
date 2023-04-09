@@ -106,7 +106,7 @@ namespace RecitalBlooms.Website.Cicd.DeployDriver
 
                 foreach (var file in files)
                 {
-                    await s3.CopyObjectAsync(bucket, file, outputs["Bucket"], bucket.Replace(prefix, string.Empty), cancellationToken);
+                    await s3.CopyObjectAsync(bucket, file, outputs["Bucket"], file.Replace(prefix, string.Empty), cancellationToken);
                     Console.WriteLine($"Uploaded {file}");
                 }
             });
