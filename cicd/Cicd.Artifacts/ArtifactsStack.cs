@@ -22,6 +22,7 @@ namespace RecitalBlooms.Website.Artifacts
             : base(scope, id, props)
         {
             AddBucket();
+            AddDns();
         }
 
         private void AddBucket()

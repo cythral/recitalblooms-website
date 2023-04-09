@@ -87,8 +87,11 @@ Resources:
         ViewerCertificate:
           AcmCertificateArn: !Ref SSLCertificate
           SslSupportMethod: sni-only
-          
+
 Outputs:
+  DistributionBucket:
+    Value: !Ref Bucket
+
   DistributionDomainName:
     Value: !GetAtt Distribution.DomainName
 

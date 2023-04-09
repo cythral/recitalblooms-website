@@ -22,12 +22,22 @@ namespace RecitalBlooms.Website.Cicd.DeployDriver
         /// <param name="context">Context holder for deployment information.</param>
         /// <param name="cancellationToken">Token used to cancel the operation.</param>
         /// <returns>The resulting task.</returns>
-        public async Task Deploy(DeployContext context, CancellationToken cancellationToken)
+        public async Task<Dictionary<string, string>> Deploy(DeployContext context, CancellationToken cancellationToken)
         {
             var stackId = await CreateChangeSet(context, cancellationToken);
-            await WaitForChangeSetCreate(stackId, context, cancellationToken);
-            await ExecuteChangeSet(stackId, context, cancellationToken);
-            await WaitForChangeSetExecute(stackId, context, cancellationToken);
+
+            try
+            {
+                await WaitForChangeSetCreate(stackId, context, cancellationToken);
+                await ExecuteChangeSet(stackId, context, cancellationToken);
+                await WaitForChangeSetExecute(stackId, context, cancellationToken);
+            }
+            catch (NoUpdatesException)
+            {
+                Console.WriteLine("Stack already up-to-date.");
+            }
+
+            return await GetOutputs(stackId, cancellationToken);
         }
 
         private async Task<string> CreateChangeSet(DeployContext context, CancellationToken cancellationToken)
@@ -70,7 +80,11 @@ namespace RecitalBlooms.Website.Cicd.DeployDriver
 
                 if (status == ChangeSetStatus.FAILED)
                 {
-                    throw new Exception($"Change set {context.ChangeSetName} failed: {reason}");
+                    var exception = reason.Contains("The submitted information didn't contain changes.") || reason.Contains("No updates are to be performed")
+                        ? new NoUpdatesException()
+                        : new Exception($"Change set {context.ChangeSetName} failed: {reason}");
+
+                    throw exception;
                 }
 
                 await Task.Delay(1000, cancellationToken);
@@ -89,7 +103,10 @@ namespace RecitalBlooms.Website.Cicd.DeployDriver
             {
                 var request = new DescribeStacksRequest { StackName = context.StackName };
                 var response = await cloudformation.DescribeStacksAsync(request, cancellationToken);
-                return response.Stacks.Any() ? ChangeSetType.UPDATE : ChangeSetType.UPDATE;
+
+                return response.Stacks.FirstOrDefault()?.StackStatus != StackStatus.REVIEW_IN_PROGRESS
+                    ? ChangeSetType.UPDATE
+                    : ChangeSetType.CREATE;
             }
             catch
             {
@@ -161,6 +178,15 @@ namespace RecitalBlooms.Website.Cicd.DeployDriver
 
             relevantEvents.Reverse();
             return relevantEvents;
+        }
+
+        private async Task<Dictionary<string, string>> GetOutputs(string stackId, CancellationToken cancellationToken)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+            var request = new DescribeStacksRequest { StackName = stackId };
+            var response = await cloudformation.DescribeStacksAsync(request, cancellationToken);
+            var stack = response.Stacks.First();
+            return stack.Outputs.ToDictionary(output => output.OutputKey, output => output.OutputValue);
         }
     }
 }

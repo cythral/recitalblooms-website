@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
@@ -56,6 +58,7 @@ namespace RecitalBlooms.Website.Cicd.DeployDriver
         {
             cancellationToken.ThrowIfCancellationRequested();
             EnvironmentConfig? config = null;
+            var bucket = options.ArtifactsLocation!.Host;
 
             await Step($"Pull {options.Environment} config", async () =>
             {
@@ -75,6 +78,8 @@ namespace RecitalBlooms.Website.Cicd.DeployDriver
                 Console.WriteLine("Loaded configuration from S3.");
             });
 
+            var outputs = new Dictionary<string, string>();
+
             await Step($"Deploy template to {options.Environment}", async () =>
             {
                 cancellationToken.ThrowIfCancellationRequested();
@@ -88,7 +93,21 @@ namespace RecitalBlooms.Website.Cicd.DeployDriver
                     Tags = config?.Tags ?? new(),
                 };
 
-                await deployer.Deploy(context, cancellationToken);
+                outputs = await deployer.Deploy(context, cancellationToken);
+            });
+
+            await Step($"Upload files to bucket", async () =>
+            {
+                cancellationToken.ThrowIfCancellationRequested();
+                var prefix = options.ArtifactsLocation.AbsolutePath + "/wwwbin";
+                var s3 = new AmazonS3Client();
+                var response = await s3.ListObjectsV2Async(new ListObjectsV2Request { BucketName = bucket, Prefix = prefix });
+                var files = response.S3Objects.Select(obj => obj.Key);
+
+                foreach (var file in files)
+                {
+                    await s3.CopyObjectAsync(bucket, file, outputs["Bucket"], bucket.Replace(prefix, string.Empty), cancellationToken);
+                }
             });
 
             lifetime.StopApplication();
