@@ -25,7 +25,7 @@ Resources:
             Principal:
               AWS: !Sub arn:aws:iam::${AWS::AccountId}:role/Agent
             Resource:
-              - !Ref Bucket
+              - !GetAtt Bucket.Arn
               - !Sub ${Bucket.Arn}/*
           - Effect: Allow
             Action: s3:GetObject
