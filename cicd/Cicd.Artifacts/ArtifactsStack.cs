@@ -60,7 +60,7 @@ namespace RecitalBlooms.Website.Artifacts
 
             _ = new CfnOutput(this, "HostedZoneId", new CfnOutputProps
             {
-                Value = Fn.GetAtt(hostedZone.LogicalId, "HostedZoneId").ToString(),
+                Value = Fn.Ref(hostedZone.LogicalId).ToString(),
                 Description = "Name of the Artifacts Bucket for Brighid Commands.",
             });
         }
