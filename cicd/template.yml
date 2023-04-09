@@ -12,9 +12,6 @@ Parameters:
 Resources:
   Bucket:
     Type: AWS::S3::Bucket
-    Properties:
-      WebsiteConfiguration:
-        IndexDocument: /index.html
 
   BucketPolicy:
     Type: AWS::S3::BucketPolicy
@@ -92,7 +89,7 @@ Resources:
           SmoothStreaming: false
           TargetOriginId: S3Origin
           ViewerProtocolPolicy: allow-all
-        DefaultRootObject: /index.html
+        DefaultRootObject: index.html
         Enabled: true
         HttpVersion: http1.1
         PriceClass: PriceClass_100
