@@ -1,6 +1,5 @@
 using Amazon.CDK;
 using Amazon.CDK.AWS.IAM;
-using Amazon.CDK.AWS.Route53;
 using Amazon.CDK.AWS.S3;
 
 using Constructs;
@@ -51,15 +50,17 @@ namespace RecitalBlooms.Website.Artifacts
 
         private void AddDns()
         {
-            var hostedZone = new HostedZone(this, "HostedZone", new HostedZoneProps
+            var hostedZone = new CfnCustomResource(this, "HostedZone", new CfnCustomResourceProps
             {
-                ZoneName = "recitalblooms.com",
-                Comment = "Hosted Zone for Recital Blooms",
+                ServiceToken = Fn.ImportValue("cfn-hosted-zone-resource:HostedZoneLambdaArn"),
             });
+
+            hostedZone.AddPropertyOverride("Name", "recitalblooms.com");
+            hostedZone.AddPropertyOverride("DelegationSetId", Fn.ImportValue("cfn-dns:DelegationSetId"));
 
             _ = new CfnOutput(this, "HostedZoneId", new CfnOutputProps
             {
-                Value = hostedZone.HostedZoneId,
+                Value = Fn.GetAtt(hostedZone.LogicalId, "HostedZoneId").ToString(),
                 Description = "Name of the Artifacts Bucket for Brighid Commands.",
             });
         }
