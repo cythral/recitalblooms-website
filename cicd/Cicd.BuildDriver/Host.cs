@@ -71,7 +71,7 @@ namespace RecitalBlooms.Website.Cicd.BuildDriver
                     cancellationToken: cancellationToken
                 );
             });
-            
+
             await Step("Deploying Artifacts Stack", async () =>
             {
                 cancellationToken.ThrowIfCancellationRequested();
