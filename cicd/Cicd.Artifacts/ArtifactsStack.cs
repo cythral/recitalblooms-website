@@ -31,7 +31,7 @@ namespace RecitalBlooms.Website.Artifacts
             bucket.AddToResourcePolicy(new PolicyStatement(new PolicyStatementProps
             {
                 Effect = Effect.ALLOW,
-                Actions = new[] { "s3:*Object" },
+                Actions = new[] { "s3:*Object", "s3:ListBucket" },
                 Resources = new[] { bucket.BucketArn, $"{bucket.BucketArn}/*" },
                 Principals = new[]
                 {
