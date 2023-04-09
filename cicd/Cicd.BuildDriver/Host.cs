@@ -56,6 +56,22 @@ namespace RecitalBlooms.Website.Cicd.BuildDriver
             Directory.CreateDirectory(CicdOutputDirectory);
             Directory.SetCurrentDirectory(ProjectRootDirectoryAttribute.ThisAssemblyProjectRootDirectory);
 
+            await Step("Bootstrapping CDK", async () =>
+            {
+                cancellationToken.ThrowIfCancellationRequested();
+
+                Directory.SetCurrentDirectory(ProjectRootDirectoryAttribute.ThisAssemblyProjectRootDirectory + "cicd/Cicd.Artifacts");
+                var command = new Command("cdk bootstrap", new Dictionary<string, object>
+                {
+                    ["--toolkit-stack-name"] = ToolkitStack,
+                });
+
+                await command.RunOrThrowError(
+                    errorMessage: "Could not bootstrap CDK.",
+                    cancellationToken: cancellationToken
+                );
+            });
+            
             await Step("Deploying Artifacts Stack", async () =>
             {
                 cancellationToken.ThrowIfCancellationRequested();
