@@ -34,7 +34,7 @@ Resources:
             Resource: !Sub ${Bucket.Arn}/*
             Condition:
               StringEquals:
-                AWS:SourceArn: !Ref Distribution
+                AWS:SourceArn: !Sub arn:aws:cloudfront::${AWS::AccountId}:distribution/${Distribution}
 
   # SSLCertificate:
   #   Type: Custom::Certificate
