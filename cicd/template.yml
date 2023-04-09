@@ -21,6 +21,13 @@ Resources:
         Version: 2012-10-17
         Statement:
           - Effect: Allow
+            Action: s3:*
+            Principal:
+              AWS: !Sub arn:aws:iam::${AWS::AccountId}:role/Agent
+            Resource:
+              - !Ref Bucket
+              - !Sub ${Bucket.Arn}/*
+          - Effect: Allow
             Action: s3:GetObject
             Principal:
               Service: cloudfront.amazonaws.com
