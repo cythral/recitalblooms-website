@@ -75,6 +75,8 @@ Resources:
     Type: AWS::CloudFront::Distribution
     Properties:
       DistributionConfig:
+        Aliases:
+          - !Ref DomainName
         Comment: !Sub Distribution for ${DomainName}
         Origins:
           - Id: S3Origin
