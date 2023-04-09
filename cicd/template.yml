@@ -29,14 +29,14 @@ Resources:
               StringEquals:
                 AWS:SourceArn: !Ref Distribution
 
-  SSLCertificate:
-    Type: Custom::Certificate
-    Properties:
-      ServiceToken: !ImportValue cfn-certificate-resource:CertificateLambdaArn
-      DomainName: !Ref DomainName
-      ValidationType: DNS
-      HostedZoneId: !Ref HostedZoneId
-      CreationRoleArn: !ImportValue cfn-certificate-resource:CreatorRoleArn
+  # SSLCertificate:
+  #   Type: Custom::Certificate
+  #   Properties:
+  #     ServiceToken: !ImportValue cfn-certificate-resource:CertificateLambdaArn
+  #     DomainName: !Ref DomainName
+  #     ValidationType: DNS
+  #     HostedZoneId: !Ref HostedZoneId
+  #     CreationRoleArn: !ImportValue cfn-certificate-resource:CreatorRoleArn
 
   CachePolicy:
     Type: AWS::CloudFront::CachePolicy
@@ -79,14 +79,14 @@ Resources:
           Compress: false
           SmoothStreaming: false
           TargetOriginId: S3Origin
-          ViewerProtocolPolicy: redirect-to-https
+          ViewerProtocolPolicy: allow-all
         DefaultRootObject: /index.html
         Enabled: true
         HttpVersion: http1.1
         PriceClass: PriceClass_100
-        ViewerCertificate:
-          AcmCertificateArn: !Ref SSLCertificate
-          SslSupportMethod: sni-only
+        # ViewerCertificate:
+        #   AcmCertificateArn: !Ref SSLCertificate
+        #   SslSupportMethod: sni-only
 
 Outputs:
   DistributionBucket:
