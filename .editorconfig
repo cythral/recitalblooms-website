@@ -1,0 +1,79 @@
+root = true
+
+[*.{cs,csx}]
+insert_final_newline = true
+
+# Namespace must match folder structure
+dotnet_diagnostic.IDE0130.severity = none
+
+# Prefix local calls with this
+dotnet_diagnostic.SA1101.severity = none
+
+# File header
+dotnet_diagnostic.SA1633.severity = none
+
+# Usings inside namespace
+dotnet_diagnostic.SA1200.severity = none
+
+# EOF Newline
+dotnet_style_code_must_not_contain_blank_lines_at_end_of_file = true:require
+dotnet_diagnostic.SA1518.severity = error
+
+# Imports - Organization and Remove Unnecessary Ones
+dotnet_separate_import_directive_groups = true
+dotnet_diagnostic.IDE0005.severity = error
+
+# "Do not directly await a task"
+# This is a library not a GUI
+dotnet_diagnostic.CA2007.severity = none
+
+# "Validate arguments are not null"
+# C# 8 Nullability makes this unnecessary
+dotnet_diagnostic.CA1062.severity = none
+
+# Globalization
+# We don't do it
+dotnet_diagnostic.CA1303.severity = none
+dotnet_diagnostic.CA1307.severity = none
+dotnet_diagnostic.CA1305.severity = none
+
+# Fields should begin with a capital letter
+dotnet_diagnostic.SA1307.severity = none
+dotnet_diagnostic.SA1303.severity = none
+
+# No query clause separation
+dotnet_diagnostic.SA1102.severity = none
+
+# Closing brace position
+dotnet_diagnostic.SA1111.severity = none
+
+# Attributes in their own bracket
+dotnet_diagnostic.SA1133.severity = none
+
+# Parentheses
+dotnet_diagnostic.SA1009.severity = none
+
+dotnet_analyzer_diagnostic.category-Style.severity = error
+dotnet_diagnostic.IDE0058.severity = none
+dotnet_diagnostic.IDE0008.severity = none
+
+dotnet_diagnostic.SA1633.severity = none
+
+# Using directive inside namespace
+dotnet_diagnostic.SA1200.severity = none
+
+# Elements must be documented (StyleCop takes care of this)
+dotnet_diagnostic.CS1591.severity = none
+
+# Block Namespace
+dotnet_diagnostic.IDE0160.severity = none
+
+[tests/**.{cs,csx}]
+# Unused parameters
+dotnet_diagnostic.CA1801.severity = none
+dotnet_diagnostic.IDE0060.severity = none
+
+# XML comments
+# Not necessary in test projects
+dotnet_diagnostic.CS1591.severity = none
+dotnet_diagnostic.SA1600.severity = none

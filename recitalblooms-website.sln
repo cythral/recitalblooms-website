@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecitalBloomsWebsite", "src\RecitalBloomsWebsite.csproj", "{58DDF50C-F711-43C1-858A-B2388C878DFB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cicd", "cicd", "{DF51C0BC-AD7E-4612-A594-86EA855719F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cicd.Artifacts", "cicd\Cicd.Artifacts\Cicd.Artifacts.csproj", "{13A1FB69-02F0-42A4-8828-804ACF9596FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cicd.BuildDriver", "cicd\Cicd.BuildDriver\Cicd.BuildDriver.csproj", "{288C8B2A-A6C9-49DF-8440-E12173E6D19E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cicd.DeployDriver", "cicd\Cicd.DeployDriver\Cicd.DeployDriver.csproj", "{F3F1EBEB-8DF8-4F78-83D1-026B94DBF077}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cicd.Utils", "cicd\Cicd.Utils\Cicd.Utils.csproj", "{E8DE11CC-3D84-4886-A814-F3B8AE334B44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58DDF50C-F711-43C1-858A-B2388C878DFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58DDF50C-F711-43C1-858A-B2388C878DFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58DDF50C-F711-43C1-858A-B2388C878DFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58DDF50C-F711-43C1-858A-B2388C878DFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13A1FB69-02F0-42A4-8828-804ACF9596FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13A1FB69-02F0-42A4-8828-804ACF9596FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13A1FB69-02F0-42A4-8828-804ACF9596FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13A1FB69-02F0-42A4-8828-804ACF9596FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{288C8B2A-A6C9-49DF-8440-E12173E6D19E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{288C8B2A-A6C9-49DF-8440-E12173E6D19E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{288C8B2A-A6C9-49DF-8440-E12173E6D19E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{288C8B2A-A6C9-49DF-8440-E12173E6D19E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3F1EBEB-8DF8-4F78-83D1-026B94DBF077}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3F1EBEB-8DF8-4F78-83D1-026B94DBF077}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3F1EBEB-8DF8-4F78-83D1-026B94DBF077}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3F1EBEB-8DF8-4F78-83D1-026B94DBF077}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8DE11CC-3D84-4886-A814-F3B8AE334B44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8DE11CC-3D84-4886-A814-F3B8AE334B44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8DE11CC-3D84-4886-A814-F3B8AE334B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8DE11CC-3D84-4886-A814-F3B8AE334B44}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{13A1FB69-02F0-42A4-8828-804ACF9596FB} = {DF51C0BC-AD7E-4612-A594-86EA855719F0}
+		{288C8B2A-A6C9-49DF-8440-E12173E6D19E} = {DF51C0BC-AD7E-4612-A594-86EA855719F0}
+		{F3F1EBEB-8DF8-4F78-83D1-026B94DBF077} = {DF51C0BC-AD7E-4612-A594-86EA855719F0}
+		{E8DE11CC-3D84-4886-A814-F3B8AE334B44} = {DF51C0BC-AD7E-4612-A594-86EA855719F0}
+	EndGlobalSection
+EndGlobal

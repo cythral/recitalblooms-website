@@ -1,0 +1,55 @@
+@import "./colors.scss";
+@import "./breakpoints.scss";
+
+footer {
+    background: $primaryColor;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .copyright {
+        flex-basis: 100%;
+        margin: 20px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        flex-basis: 100%;
+        flex-grow: 1;
+        width: 100%;
+        margin: 20px;
+        margin-top: 0;
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            li {
+                margin: 10px;
+
+                &:not(:last-child):after {
+                    content: "|";
+                    display: inline-block;
+                    margin-left: 20px;
+
+                    @media (max-width: $breakpoint-tablet) {
+                        display: none;
+                    }
+                }
+
+                a {
+                    color: white;
+                }
+            }
+        }
+
+       
+    }
+}

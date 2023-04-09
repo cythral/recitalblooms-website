@@ -1,0 +1,11 @@
+MinimumStatiqWebVersion-CleanBlog: "1.0.0-beta.36"
+SiteTitle: Recital Blooms
+PageTitle: |
+  =>
+  {
+    string siteTitle = Context.GetString("SiteTitle");
+    string title = GetString("Title");
+    return string.IsNullOrWhiteSpace(siteTitle) ? title : (string.IsNullOrWhiteSpace(title) ? siteTitle : $"{siteTitle} - {title}");
+  }
+Copyright: => $"Copyright © {DateTime.Now.Year}"
+Layout: /_Layout.cshtml

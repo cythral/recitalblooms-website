@@ -1,0 +1,8 @@
+.vs/
+bin/
+obj/
+.nuget/
+.ionide/
+.fake
+.env
+brighid-commands.*.config.json

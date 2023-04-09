@@ -1,0 +1,96 @@
+Transform: AWS::Serverless-2016-10-31
+Description: Brighid Commands Service
+Parameters:
+  DomainName:
+    Type: String
+    Description: Domain name to use for Brighid Commands.
+
+  HostedZoneId:
+    Type: String
+    Description: ID of the hosted zone to add domains to.
+
+Resources:
+  Bucket:
+    Type: AWS::S3::Bucket
+
+  BucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref Bucket
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Effect: Allow
+            Action: s3:GetObject
+            Principal:
+              Service: cloudfront.amazonaws.com
+            Resource: !Sub ${Bucket.Arn}/*
+            Condition:
+              StringEquals:
+                AWS:SourceArn: !Ref Distribution
+
+  SSLCertificate:
+    Type: Custom::Certificate
+    Properties:
+      ServiceToken: !ImportValue cfn-certificate-resource:CertificateLambdaArn
+      DomainName: !Ref DomainName
+      ValidationType: DNS
+      HostedZoneId: !Ref HostedZoneId
+      CreationRoleArn: !ImportValue cfn-certificate-resource:CreatorRoleArn
+
+  CachePolicy:
+    Type: AWS::CloudFront::CachePolicy
+    Properties:
+      CachePolicyConfig:
+        DefaultTTL: 3600
+        MaxTTL: 3600
+        MinTTL: 0
+        Name: RecitalBloomsDefaultCachePolicy
+        ParametersInCacheKeyAndForwardedToOrigin:
+          CookiesConfig:
+            CookieBehavior: none
+          EnableAcceptEncodingGzip: true
+          HeadersConfig:
+            HeaderBehavior: none
+          QueryStringsConfig:
+            QueryStringBehavior: none
+
+  OriginAccessControl:
+    Type: AWS::CloudFront::OriginAccessControl
+    Properties:
+      OriginAccessControlConfig:
+        Name: RecitalBloomsOriginAccessControl
+        SigningProtocol: sigv4
+        SigningBehavior: always
+        OriginAccessControlOriginType: s3
+
+  Distribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Comment: !Sub Distribution for ${DomainName}
+        Origins:
+          - Id: S3Origin
+            OriginAccessControlId: !Ref OriginAccessControl
+            DomainName: !GetAtt Bucket.DomainName
+            S3OriginConfig: {}
+        DefaultCacheBehavior:
+          CachePolicyId: !Ref CachePolicy
+          Compress: false
+          SmoothStreaming: false
+          TargetOriginId: S3Origin
+          ViewerProtocolPolicy: redirect-to-https
+        DefaultRootObject: /index.html
+        Enabled: true
+        HttpVersion: http1.1
+        PriceClass: PriceClass_100
+        ViewerCertificate:
+          AcmCertificateArn: !Ref SSLCertificate
+          SslSupportMethod: sni-only
+          
+Outputs:
+  DistributionDomainName:
+    Value: !GetAtt Distribution.DomainName
+
+  DistributionId:
+    Value: !GetAtt Distribution.Id

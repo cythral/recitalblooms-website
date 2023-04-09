@@ -1,0 +1,10 @@
+Tags:
+  Name: Recital Blooms Website
+  Owner: Cythral
+  Contact:Name: Gabe Awuol
+  Contact:Email: recitalblooms@gmail.com
+
+Parameters:
+  DomainName:
+    Development: dev.recitalblooms.com
+    Production: recitalblooms.com
