@@ -99,7 +99,7 @@ namespace RecitalBlooms.Website.Cicd.DeployDriver
             await Step($"Upload files to bucket", async () =>
             {
                 cancellationToken.ThrowIfCancellationRequested();
-                var prefix = options.ArtifactsLocation.AbsolutePath + "/wwwbin";
+                var prefix = options.ArtifactsLocation.AbsolutePath.TrimStart('/') + "/wwwbin";
                 var s3 = new AmazonS3Client();
                 var response = await s3.ListObjectsV2Async(new ListObjectsV2Request { BucketName = bucket, Prefix = prefix });
                 var files = response.S3Objects.Select(obj => obj.Key);
