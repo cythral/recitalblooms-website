@@ -98,7 +98,7 @@ Resources:
         #   SslSupportMethod: sni-only
 
 Outputs:
-  DistributionBucket:
+  Bucket:
     Value: !Ref Bucket
 
   DistributionDomainName:
