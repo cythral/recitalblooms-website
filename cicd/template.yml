@@ -84,9 +84,8 @@ Resources:
         Origins:
           - Id: S3Origin
             OriginAccessControlId: !Ref OriginAccessControl
-            DomainName: !Sub ${Bucket}.s3-website.us-east-1.amazonaws.com
-            CustomOriginConfig:
-              OriginProtocolPolicy: https-only
+            DomainName: !GetAtt Bucket.DomainName
+            S3OriginConfig: {}
         DefaultCacheBehavior:
           CachePolicyId: !Ref CachePolicy
           Compress: false
