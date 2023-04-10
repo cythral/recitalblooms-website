@@ -36,14 +36,14 @@ Resources:
               StringEquals:
                 AWS:SourceArn: !Sub arn:aws:cloudfront::${AWS::AccountId}:distribution/${Distribution}
 
-  # SSLCertificate:
-  #   Type: Custom::Certificate
-  #   Properties:
-  #     ServiceToken: !ImportValue cfn-certificate-resource:CertificateLambdaArn
-  #     DomainName: !Ref DomainName
-  #     ValidationType: DNS
-  #     HostedZoneId: !Ref HostedZoneId
-  #     CreationRoleArn: !ImportValue cfn-certificate-resource:CreatorRoleArn
+  SSLCertificate:
+    Type: Custom::Certificate
+    Properties:
+      ServiceToken: !ImportValue cfn-certificate-resource:CertificateLambdaArn
+      DomainName: !Ref DomainName
+      ValidationType: DNS
+      HostedZoneId: !Ref HostedZoneId
+      CreationRoleArn: !ImportValue cfn-certificate-resource:CreatorRoleArn
 
   CachePolicy:
     Type: AWS::CloudFront::CachePolicy
@@ -75,8 +75,8 @@ Resources:
     Type: AWS::CloudFront::Distribution
     Properties:
       DistributionConfig:
-        # Aliases:
-        #   - !Ref DomainName
+        Aliases:
+          - !Ref DomainName
         Comment: !Sub Distribution for ${DomainName}
         Origins:
           - Id: S3Origin
@@ -93,9 +93,9 @@ Resources:
         Enabled: true
         HttpVersion: http1.1
         PriceClass: PriceClass_100
-        # ViewerCertificate:
-        #   AcmCertificateArn: !Ref SSLCertificate
-        #   SslSupportMethod: sni-only
+        ViewerCertificate:
+          AcmCertificateArn: !Ref SSLCertificate
+          SslSupportMethod: sni-only
 
 Outputs:
   Bucket:
