@@ -25,10 +25,10 @@ function showThanksMessage() {
     form.innerHTML = `<div class="thanks"><h2>Thanks for Contacting Us!</h2><p>We will reply as soon as possible.</p></div>`;
 }
 
-form.onsubmit = async function(event) {
+form.onsubmit = async function (event) {
     event.preventDefault();
     readFormDataIntoState();
-    
+
     const response = await fetch("https://commands.brigh.id/commands/email/execute/recaptcha", {
         method: "POST",
         headers: {
@@ -36,7 +36,7 @@ form.onsubmit = async function(event) {
             "G-Recaptcha-Response": formState.token,
         },
         body: JSON.stringify({
-            To: "support@cythral.com",
+            To: "recitalblooms@gmail.com",
             From: formState.email,
             Subject: "Recital Blooms Contact Form Submission",
             Message: formState.message,
