@@ -89,6 +89,9 @@ Resources:
           SmoothStreaming: false
           TargetOriginId: S3Origin
           ViewerProtocolPolicy: allow-all
+          FunctionAssociations:
+            - EventType: origin-request
+              FunctionARN: !GetAtt RewriteFunction.FunctionARN
         DefaultRootObject: index.html
         Enabled: true
         HttpVersion: http1.1
@@ -96,6 +99,28 @@ Resources:
         ViewerCertificate:
           AcmCertificateArn: !Ref SSLCertificate
           SslSupportMethod: sni-only
+
+  RewriteFunction:
+    Type: AWS::CloudFront::Function
+    Properties:
+      AutoPublish: true
+      FunctionCode: |
+        function handler(event) {
+            var request = event.request;
+            var uri = request.uri;
+
+            if (uri === '/') {
+              request.uri = '/index.html';
+            } else if (!uri.includes('.')) {
+              request.uri += '.html';
+            }
+
+            return request;
+        }
+      FunctionConfig:
+        Comment: URI Rewriter for Recital Blooms Distribution
+        Runtime: cloudfront-js-1.0
+      Name: RecitalBloomsUriRewriter
 
 Outputs:
   Bucket:
