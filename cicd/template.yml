@@ -88,13 +88,14 @@ Resources:
           Compress: false
           SmoothStreaming: false
           TargetOriginId: S3Origin
-          ViewerProtocolPolicy: allow-all
+          ViewerProtocolPolicy: redirect-to-https
           FunctionAssociations:
             - EventType: viewer-request
               FunctionARN: !GetAtt RewriteFunction.FunctionARN
         DefaultRootObject: index.html
         Enabled: true
-        HttpVersion: http1.1
+        HttpVersion: http2
+        IPV6Enabled: true
         PriceClass: PriceClass_100
         ViewerCertificate:
           AcmCertificateArn: !Ref SSLCertificate
