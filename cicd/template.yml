@@ -90,7 +90,7 @@ Resources:
           TargetOriginId: S3Origin
           ViewerProtocolPolicy: allow-all
           FunctionAssociations:
-            - EventType: origin-request
+            - EventType: viewer-request
               FunctionARN: !GetAtt RewriteFunction.FunctionARN
         DefaultRootObject: index.html
         Enabled: true
