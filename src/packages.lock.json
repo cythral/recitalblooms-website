@@ -14,29 +14,29 @@
       },
       "Statiq.Web": {
         "type": "Direct",
-        "requested": "[1.0.0-beta.54, )",
-        "resolved": "1.0.0-beta.54",
-        "contentHash": "TOcwYogzLJP5IEVilYPhNlxKYQ52DGUVoRCaRq9ivTPlRdY7RnA/kz+g9zX07xATcQ7H1a74W59BqLsMtIi0BA==",
+        "requested": "[1.0.0-beta.55, )",
+        "resolved": "1.0.0-beta.55",
+        "contentHash": "IjaDIa9Deima3XB0jQTakAsEpItCBNIIiRcneoyCOs7oxp8Et/foAjyTGtcwouyBDH3ozvJLncrv9W63EK1q9Q==",
         "dependencies": {
           "Buildalyzer.Workspaces": "4.1.2",
-          "Statiq.App": "1.0.0-beta.66",
-          "Statiq.Common": "1.0.0-beta.66",
-          "Statiq.Core": "1.0.0-beta.66",
-          "Statiq.Feeds": "1.0.0-beta.66",
-          "Statiq.Handlebars": "1.0.0-beta.66",
-          "Statiq.Highlight": "1.0.0-beta.66",
-          "Statiq.Less": "1.0.0-beta.66",
-          "Statiq.Lunr": "1.0.0-beta.66",
-          "Statiq.Markdown": "1.0.0-beta.66",
-          "Statiq.Minification": "1.0.0-beta.66",
-          "Statiq.Razor": "1.0.0-beta.66",
-          "Statiq.Sass": "1.0.0-beta.66",
-          "Statiq.Web.Aws": "1.0.0-beta.54",
-          "Statiq.Web.Azure": "1.0.0-beta.54",
-          "Statiq.Web.GitHub": "1.0.0-beta.54",
-          "Statiq.Web.Hosting": "1.0.0-beta.54",
-          "Statiq.Web.Netlify": "1.0.0-beta.54",
-          "Statiq.Yaml": "1.0.0-beta.66"
+          "Statiq.App": "1.0.0-beta.67",
+          "Statiq.Common": "1.0.0-beta.67",
+          "Statiq.Core": "1.0.0-beta.67",
+          "Statiq.Feeds": "1.0.0-beta.67",
+          "Statiq.Handlebars": "1.0.0-beta.67",
+          "Statiq.Highlight": "1.0.0-beta.67",
+          "Statiq.Less": "1.0.0-beta.67",
+          "Statiq.Lunr": "1.0.0-beta.67",
+          "Statiq.Markdown": "1.0.0-beta.67",
+          "Statiq.Minification": "1.0.0-beta.67",
+          "Statiq.Razor": "1.0.0-beta.67",
+          "Statiq.Sass": "1.0.0-beta.67",
+          "Statiq.Web.Aws": "1.0.0-beta.55",
+          "Statiq.Web.Azure": "1.0.0-beta.55",
+          "Statiq.Web.GitHub": "1.0.0-beta.55",
+          "Statiq.Web.Hosting": "1.0.0-beta.55",
+          "Statiq.Web.Netlify": "1.0.0-beta.55",
+          "Statiq.Yaml": "1.0.0-beta.67"
         }
       },
       "StyleCop.Analyzers": {
@@ -1118,8 +1118,8 @@
       },
       "Statiq.App": {
         "type": "Transitive",
-        "resolved": "1.0.0-beta.66",
-        "contentHash": "hxCIZYNn7ztWzGmJyAc5riWoFqKDlvGbDulYrGizowxG+Wms6MB84/jceBVSBg3WWLhj5wqgM+WuE3qHfwlG4w==",
+        "resolved": "1.0.0-beta.67",
+        "contentHash": "MfHXXTmKBeO3JrHER4v+Og/JZdvPV9+Wh+8SSWHURLtw+SuCxklwQ/zG+csxo+BFERNUAsPG5eedY+WhKMq1bg==",
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp.Scripting": "4.1.0",
           "Microsoft.Extensions.Configuration.CommandLine": "3.1.18",
@@ -1132,9 +1132,9 @@
           "NetEscapades.Configuration.Yaml": "2.0.1",
           "NetEscapades.Extensions.Logging.RollingFile": "2.2.0",
           "Spectre.Console": "0.43.0",
-          "Statiq.Common": "1.0.0-beta.66",
-          "Statiq.Core": "1.0.0-beta.66",
-          "Statiq.Testing": "1.0.0-beta.66"
+          "Statiq.Common": "1.0.0-beta.67",
+          "Statiq.Core": "1.0.0-beta.67",
+          "Statiq.Testing": "1.0.0-beta.67"
         }
       },
       "Statiq.Common": {
@@ -1154,8 +1154,8 @@
       },
       "Statiq.Core": {
         "type": "Transitive",
-        "resolved": "1.0.0-beta.66",
-        "contentHash": "3prKeXnKpUBxDkACd5l+3cqEqvxB9HUpKraD6aL+B7hpe2H/V/iw8PQ2yVUp7V6sY0gZIHEjFK/6TcXw83tskA==",
+        "resolved": "1.0.0-beta.67",
+        "contentHash": "GrvEfXzXczDTs9DoncWic7HF5D4h+S36+hc2ewNJcl244zQ4xez6qgb/ovwq++QZ64weZLSJ7CJB9SsqSuQ3rg==",
         "dependencies": {
           "JSPool": "2.0.1",
           "JavaScriptEngineSwitcher.Core": "3.0.0",
@@ -1166,77 +1166,77 @@
           "Microsoft.IO.RecyclableMemoryStream": "1.2.2",
           "Polly": "7.1.1",
           "SemanticVersioning": "1.2.2",
-          "Statiq.Common": "1.0.0-beta.66",
+          "Statiq.Common": "1.0.0-beta.67",
           "System.Collections.Immutable": "5.0.0",
           "System.Linq.Async": "4.0.0"
         }
       },
       "Statiq.Feeds": {
         "type": "Transitive",
-        "resolved": "1.0.0-beta.66",
-        "contentHash": "KBQnOgaaV8qCTHDS+HF2Wf6XDzivH8tOmuIlu72cEYiL/+6VuU/JtUbn/YawrNLlhDqVHMO7Esjw3TeJr1tOuA==",
+        "resolved": "1.0.0-beta.67",
+        "contentHash": "dZI+pEu7IfS7JJqzLqP1qEWrF7gVs5JZxMUROGeIgiTw/lYzOhMYgc10qsTQ7MuG3jzQ53Iy7UNudKKH0tcyDg==",
         "dependencies": {
-          "Statiq.Common": "1.0.0-beta.66"
+          "Statiq.Common": "1.0.0-beta.67"
         }
       },
       "Statiq.Handlebars": {
         "type": "Transitive",
-        "resolved": "1.0.0-beta.66",
-        "contentHash": "gDbWdjekfFSqh0F5TeMSTltc0h8UdOnPD4snDjGP/F8yif+XCiWH2h8xg50TTwro7pDGbo4IasoCsOsE1x0bzQ==",
+        "resolved": "1.0.0-beta.67",
+        "contentHash": "fzLZfpP3LKTdpmdamV+mIoYX77Q+jp1V720QRe2mlaTHGl54gM15FjbFEKggG9aEm5SLxCw5zJ/vYlGEQXryGg==",
         "dependencies": {
           "Handlebars.Net": "1.10.1",
-          "Statiq.Common": "1.0.0-beta.66"
+          "Statiq.Common": "1.0.0-beta.67"
         }
       },
       "Statiq.Highlight": {
         "type": "Transitive",
-        "resolved": "1.0.0-beta.66",
-        "contentHash": "7Wnle5BeIWPraty2uOj82goFgucI3WeT/IetC2csKKvKS4dLwhBj8LdY8qBZ7MJr2u6ojjvgG5oAFme+f3jKBQ==",
+        "resolved": "1.0.0-beta.67",
+        "contentHash": "lVa/+Cyqfjp0Iv9qR+hHPMtMS0/eqtfF6AY6bHoBHozMGDFlfIOrXQcMRAByRpY/twqR/VE7MffDHfokExVhAg==",
         "dependencies": {
-          "Statiq.Common": "1.0.0-beta.66"
+          "Statiq.Common": "1.0.0-beta.67"
         }
       },
       "Statiq.Less": {
         "type": "Transitive",
-        "resolved": "1.0.0-beta.66",
-        "contentHash": "RCz/bsubbfs3gSGYOjVwyvLEe6NfyBsgU9ABuXbZAo7pYpneyPMTDScx8eXDeT71UnjZlCwiwYKyfYWqOMA+Hg==",
+        "resolved": "1.0.0-beta.67",
+        "contentHash": "C53FJcKPW/dhfKM4oPPWy/FgaLekzhZIYyZ/DnG8bMjx63V/2WtVXgbq1nlwq45EjuA0AiiztXuSuIfWQLkAaQ==",
         "dependencies": {
-          "Statiq.Common": "1.0.0-beta.66",
+          "Statiq.Common": "1.0.0-beta.67",
           "dotless.Core": "0.0.1"
         }
       },
       "Statiq.Lunr": {
         "type": "Transitive",
-        "resolved": "1.0.0-beta.66",
-        "contentHash": "dR1Gve6BSUqDqJ39PmxBhKckFgwwW7HKzanApl+VI8Nx3PI0hOA/aoW8uJMuLOIAJktXAGsmj5wOlXR2/X4SoA==",
+        "resolved": "1.0.0-beta.67",
+        "contentHash": "9SS29CBVYpj3LbK5IiWv1Cod6rNIVH5ToM4ocbvwUStXhfZ/1TM3d2spZpm3oVnH73vlSKSxfHtb0Q2M71JbPw==",
         "dependencies": {
           "LunrCore": "2.3.9",
-          "Statiq.Common": "1.0.0-beta.66"
+          "Statiq.Common": "1.0.0-beta.67"
         }
       },
       "Statiq.Markdown": {
         "type": "Transitive",
-        "resolved": "1.0.0-beta.66",
-        "contentHash": "iN/qo+CjgCUis4XdGlAs+nIzAwAMK3fa26C5pZFJbjW8qpjLp2ENCzbtYuspsciXqCxXqKEFhjg9WZzz3nXPbg==",
+        "resolved": "1.0.0-beta.67",
+        "contentHash": "Um15D67rKMSXdKIL9PguXScDuO92gINLaDB2mWAaGMXzJ8h5yy8rKMZhQo6StnyRtrt45Vyrh7HEyPeYcWCeuQ==",
         "dependencies": {
           "Markdig": "0.26.0",
-          "Statiq.Common": "1.0.0-beta.66"
+          "Statiq.Common": "1.0.0-beta.67"
         }
       },
       "Statiq.Minification": {
         "type": "Transitive",
-        "resolved": "1.0.0-beta.66",
-        "contentHash": "3XsmK5h+rj9JCvcAb5dnRgyajpvgI9vybWZ6MmpuBBZLxtOqQjQLuOdEMVHuyyjEK8hiC7ObLtUYNQhgDrAXjQ==",
+        "resolved": "1.0.0-beta.67",
+        "contentHash": "q7SQCuvsq6Rsy+y+HddFAccBmpuO368C7dGbFeWDmGAQRB2JbICJpZUVDj73PulDWrQK8t+gjmw6K+FfQHT6MA==",
         "dependencies": {
-          "Statiq.Common": "1.0.0-beta.66",
+          "Statiq.Common": "1.0.0-beta.67",
           "System.Linq.Async": "4.0.0",
           "WebMarkupMin.Core": "2.3.0"
         }
       },
       "Statiq.Razor": {
         "type": "Transitive",
-        "resolved": "1.0.0-beta.66",
-        "contentHash": "hvt0ErsmXHKqa4QXBN4mSMmPXXv1ouLHEI7ZO9og6Hfvr+XbEL9jhyCvX+lOjrRFZz9NB7sch6Ww/kUuiNYpgQ==",
+        "resolved": "1.0.0-beta.67",
+        "contentHash": "7TzRRxzyeEZW99XGGxQ9XlqDcrX0yVAQt6ntbm8x+wSFm5M2luyJ78g+pTXGmgNnrz3+YJug0wnK45Q/btDMmQ==",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Razor.Extensions": "3.1.15",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "3.1.15",
@@ -1245,77 +1245,77 @@
           "Microsoft.Extensions.DependencyInjection": "3.1.18",
           "Microsoft.Extensions.FileProviders.Composite": "3.1.18",
           "Microsoft.Extensions.FileProviders.Physical": "3.1.18",
-          "Statiq.Common": "1.0.0-beta.66"
+          "Statiq.Common": "1.0.0-beta.67"
         }
       },
       "Statiq.Testing": {
         "type": "Transitive",
-        "resolved": "1.0.0-beta.66",
-        "contentHash": "vcg/7tCJ3YsdqbaoM3b4aVsVqLfVXdTyg1qk1KlK3noJCEY2sZpJwxCKnxPoVzn9hGkmuxSFJiLwoDnbZvzoFw==",
+        "resolved": "1.0.0-beta.67",
+        "contentHash": "D8GqPxBs0OE7Db1ElsgjHmAR7yNEO3eNmlF/ksH/FDzFYwEEYGhA2pNF+7ajk74zX1moI+n6LoNqNz5JyHq5+w==",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "3.1.18",
           "Microsoft.Extensions.Logging": "3.1.18",
           "NUnit": "3.12.0",
           "Shouldly": "4.0.3",
-          "Statiq.Common": "1.0.0-beta.66",
+          "Statiq.Common": "1.0.0-beta.67",
           "System.Collections.Immutable": "5.0.0"
         }
       },
       "Statiq.Web.Aws": {
         "type": "Transitive",
-        "resolved": "1.0.0-beta.54",
-        "contentHash": "/KoQNftkijI5Qb3d/3ag3sIrnDDNU0Yqks6/SsYKVuN08v/CHRKYkbqmXPyznNJ7R6363O3EPBbcI09ko27HKw==",
+        "resolved": "1.0.0-beta.55",
+        "contentHash": "hcON456AiSlpOlNRB5m7sQ+Q4N7sFa7DKDJ0+eH1nBWF3ch2F+1eY5iA9cHDZlp62cPvrR9mom57Uv6pTcPaMA==",
         "dependencies": {
           "Newtonsoft.Json": "12.0.2",
-          "Statiq.Common": "1.0.0-beta.66"
+          "Statiq.Common": "1.0.0-beta.67"
         }
       },
       "Statiq.Web.Azure": {
         "type": "Transitive",
-        "resolved": "1.0.0-beta.54",
-        "contentHash": "jfUoyab+xm/bidf7wex0HAd16aQ8VNF7uGDDawozO4J4Ha8eMZAkUD5G70kQaU3gGX92KT9VbcRs7QBjHspqQg==",
+        "resolved": "1.0.0-beta.55",
+        "contentHash": "1244UQtuqP7JzeOulECy4SneQIjphs0vC57k/PxWbRZyVnj5IDGHbOT4N2L5+3FwbRAB7F5zX8hp4bYonV7BXg==",
         "dependencies": {
           "Microsoft.Azure.Search": "10.1.0",
           "Polly": "7.1.1",
-          "Statiq.Common": "1.0.0-beta.66"
+          "Statiq.Common": "1.0.0-beta.67"
         }
       },
       "Statiq.Web.GitHub": {
         "type": "Transitive",
-        "resolved": "1.0.0-beta.54",
-        "contentHash": "9E4cRiIinG+TE791o42TxzkYv3z5iVt20AcOd9N2InU7TizA1hmZD5kEkGHP/DJ9CR/JSBRxL6cfj8X87YI4rg==",
+        "resolved": "1.0.0-beta.55",
+        "contentHash": "opjct6UWFgYMBQ7rF52TE+Ap/tXsC/ZDCOhy3SdQ/vyo2Sa1nkl4GJtuamFfW60QLzUOGjztgfjHtAgYmaaLBA==",
         "dependencies": {
           "Octokit": "0.46.0",
           "Polly": "7.1.1",
-          "Statiq.Common": "1.0.0-beta.66"
+          "Statiq.Common": "1.0.0-beta.67"
         }
       },
       "Statiq.Web.Hosting": {
         "type": "Transitive",
-        "resolved": "1.0.0-beta.54",
-        "contentHash": "zFtbE3LI8F/IktpkJgFZOtNNB6UPlz50zrg1Rs4+HPGI6FRT/TszaCfWUShDxB1tvnFALqMjbowVWTduSb+KUA==",
+        "resolved": "1.0.0-beta.55",
+        "contentHash": "8RQIhclC0S/tyOB7HDaZXuImvhVHkBa2Tqo330DDLkuyrni4gK98jyRPzzF41gcImV1TznsdxEmOmfYX5/nAZA==",
         "dependencies": {
           "Microsoft.Extensions.FileProviders.Composite": "3.0.0",
           "Microsoft.Extensions.FileProviders.Embedded": "3.0.0",
           "Microsoft.Extensions.FileProviders.Physical": "3.0.0",
-          "Statiq.Common": "1.0.0-beta.66"
+          "Statiq.Common": "1.0.0-beta.67"
         }
       },
       "Statiq.Web.Netlify": {
         "type": "Transitive",
-        "resolved": "1.0.0-beta.54",
-        "contentHash": "NlRnpihfdcvCZ9Fk7RZXVLulfG6CJMTBN5RMGg1GLw4Tf50GJrG8FY2DOOEtK0tkUAYyHB8QS6q6qrb0EsXYJQ==",
+        "resolved": "1.0.0-beta.55",
+        "contentHash": "Nl003wZGs9p97JPNaq83XgycMSOtwzVirKlbSIGhlG+xtDKhhX8jTACCaghc2Kt231b11nbbcq/HcPxV6oDftA==",
         "dependencies": {
           "NetlifySharp": "1.1.0",
-          "Statiq.Common": "1.0.0-beta.66"
+          "Statiq.Common": "1.0.0-beta.67"
         }
       },
       "Statiq.Yaml": {
         "type": "Transitive",
-        "resolved": "1.0.0-beta.66",
-        "contentHash": "VhlUoBSNB2+KQ6hACigHqfRWy33Ig6fiT/nrnwNmoSOLdmIzae8ouvtczccPTU1EPjC4mbL9LV2EoN2/fdUTmw==",
+        "resolved": "1.0.0-beta.67",
+        "contentHash": "6zYMv0WPiTJ6+WZU8DAXEvW5xcCKwLs0/u/ZUAFmqgYm2XksYHoeN+Mk9WxaVKg8TkL+tZNZ8Vt4mu1rd6J5pg==",
         "dependencies": {
-          "Statiq.Common": "1.0.0-beta.66",
+          "Statiq.Common": "1.0.0-beta.67",
           "YamlDotNet": "4.3.1"
         }
       },
