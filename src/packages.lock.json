@@ -4,12 +4,12 @@
     "net6.0": {
       "Statiq.Sass": {
         "type": "Direct",
-        "requested": "[1.0.0-beta.69, )",
-        "resolved": "1.0.0-beta.69",
-        "contentHash": "92wO5YGGQctrPPLUNr86VR7wvz1mKKMtS10YD8Ss/bEFpzDiXKww/DyI7y0FDvgOAJ9319xiT3QDAy4JhsRXNw==",
+        "requested": "[1.0.0-beta.70, )",
+        "resolved": "1.0.0-beta.70",
+        "contentHash": "T52uJASvgmttH9UU7pBCnouqljuPr9zgM8iLi5KFFd9I9ALP9FPi4WN10iEAmDQ3fBQTnT8QHJhA6XylK6KlHw==",
         "dependencies": {
           "SharpScss": "1.4.0",
-          "Statiq.Common": "1.0.0-beta.69"
+          "Statiq.Common": "1.0.0-beta.70"
         }
       },
       "Statiq.Web": {
@@ -1139,8 +1139,8 @@
       },
       "Statiq.Common": {
         "type": "Transitive",
-        "resolved": "1.0.0-beta.69",
-        "contentHash": "MW7Jz5PYlRMIgQPWRe2wuIX3+u0jYs2+TaXxAv4KryfdJhx+DXLVP7IzphaEbKwtvzveYWS0sJlQpvHl3H7dcw==",
+        "resolved": "1.0.0-beta.70",
+        "contentHash": "ZI3nnCGiLre8x8cyLrstal0Wq6hxpHxuU3Dh+a3AoWvrA7+NEC2MiW0fhGGivjj28rfYiusE3KRzwSViwe343A==",
         "dependencies": {
           "AngleSharp": "0.16.1",
           "ConcurrentHashSet": "1.1.0",
