@@ -4,9 +4,9 @@
     "net7.0": {
       "Amazon.CDK.Lib": {
         "type": "Direct",
-        "requested": "[2.94.0, )",
-        "resolved": "2.94.0",
-        "contentHash": "WjCf7f0LGrbl9SlPXj4gABuqvbjy9gm9XlAaALTR5T9Qju2e67xngIyiQ1ourgZ2BzdeublZZmNmSWAjzSdeUg==",
+        "requested": "[2.95.0, )",
+        "resolved": "2.95.0",
+        "contentHash": "nDqAj0Kt7Xj0s1ZMxnPYAwGT6BJ1oVxAGNsFQJebUYlkpdZ1CA64SoGQ++RxxKj66gb4grUSFKCeALjrLEcKFA==",
         "dependencies": {
           "Amazon.CDK.Asset.AwsCliV1": "[2.2.200, 3.0.0)",
           "Amazon.CDK.Asset.KubectlV20": "[2.1.2, 3.0.0)",
