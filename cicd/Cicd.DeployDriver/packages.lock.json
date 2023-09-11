@@ -75,8 +75,8 @@
       },
       "AWSSDK.ECR": {
         "type": "Transitive",
-        "resolved": "3.7.200.36",
-        "contentHash": "37jzO6oCtCruTWZczRURQ9Wyqd75/pWJHdBWbnBPiYv5LW3FHG18emZHqEr1E6eYcxSR6CWJR4n50BjPBAO/Nw==",
+        "resolved": "3.7.201",
+        "contentHash": "zCGPWdrVCzCVEMJYxC22iOIMSDBwrMnHa9aOy0N8u+7iKYdpznzs4ZPYdCPLjgnY8qEzVsPsXEMMBIbh13Gwlg==",
         "dependencies": {
           "AWSSDK.Core": "[3.7.202.5, 4.0.0)"
         }
@@ -349,7 +349,7 @@
       "cicd.utils": {
         "type": "Project",
         "dependencies": {
-          "AWSSDK.ECR": "[3.7.200.36, )",
+          "AWSSDK.ECR": "[3.7.201, )",
           "AWSSDK.ECRPublic": "[3.7.200.36, )"
         }
       }
