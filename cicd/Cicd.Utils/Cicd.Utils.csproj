@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <ItemGroup>
-    <PackageReference Include="AWSSDK.ECR" Version="3.7.201.5" />
-    <PackageReference Include="AWSSDK.ECRPublic" Version="3.7.200.41" />
+    <PackageReference Include="AWSSDK.ECR" Version="3.7.201.6" />
+    <PackageReference Include="AWSSDK.ECRPublic" Version="3.7.200.42" />
   </ItemGroup>
 </Project>
