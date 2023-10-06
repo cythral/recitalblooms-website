@@ -4,14 +4,14 @@
     "net7.0": {
       "Amazon.CDK.Lib": {
         "type": "Direct",
-        "requested": "[2.99.1, )",
-        "resolved": "2.99.1",
-        "contentHash": "VhPc0o9/uu1FrFq9QoOeLW5zoMgAlgJd5mAnBLAeBtPiQpSBMerSANgXn4rWTplVwAf73aMKsMgmg43qlSlsNw==",
+        "requested": "[2.100.0, )",
+        "resolved": "2.100.0",
+        "contentHash": "bjoSpL6/mZVC4KR+e+kpCXMWRBHWRQq2Yzu+h+cQsSrJGYA/s192y3Jt7MDSSPzL7wOrliZciYJVRnTM8pMJfg==",
         "dependencies": {
           "Amazon.CDK.Asset.AwsCliV1": "[2.2.200, 3.0.0)",
           "Amazon.CDK.Asset.KubectlV20": "[2.1.2, 3.0.0)",
           "Amazon.CDK.Asset.NodeProxyAgentV6": "[2.0.1, 3.0.0)",
-          "Amazon.JSII.Runtime": "[1.88.0, 2.0.0)",
+          "Amazon.JSII.Runtime": "[1.89.0, 2.0.0)",
           "Constructs": "[10.0.0, 11.0.0)"
         }
       },
@@ -59,8 +59,8 @@
       },
       "Amazon.JSII.Runtime": {
         "type": "Transitive",
-        "resolved": "1.88.0",
-        "contentHash": "nnMkYPbQRalOYZcrFt4fzZJKzmCDRj0JSxtmpwXboRVYu4zK8EHWo2T5vMvB38XH7jQwiT6nIJ/3l4b8Je+abQ==",
+        "resolved": "1.89.0",
+        "contentHash": "7RAx2LO+1tV87Z5UD5I7b5vrS3G0c/E2WuFbpyebI/84pdLw4+cuMX7cOR7kjl3lt07A39XIBnTiJFSFSkngAw==",
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
           "Microsoft.Extensions.Logging": "7.0.0",
