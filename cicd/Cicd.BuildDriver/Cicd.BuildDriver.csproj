@@ -21,7 +21,7 @@
         <PackageReference Include="AWSSDK.SecurityToken" Version="3.7.202.5" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
         <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
-        <PackageReference Include="YamlDotNet" Version="13.7.0" />
+        <PackageReference Include="YamlDotNet" Version="13.7.1" />
     </ItemGroup>
 
     <ItemGroup>
