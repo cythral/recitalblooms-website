@@ -39,7 +39,7 @@ jobs:
           role-to-assume: ${{ secrets.AWS_SHARED_ROLE }}
           aws-region: us-east-1
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: "14"
 
