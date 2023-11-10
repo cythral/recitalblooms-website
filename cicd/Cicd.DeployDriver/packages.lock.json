@@ -4,29 +4,29 @@
     "net7.0": {
       "AWSSDK.CloudFormation": {
         "type": "Direct",
-        "requested": "[3.7.205, )",
-        "resolved": "3.7.205",
-        "contentHash": "DknkKFbyiPscu1wdh3nWAphHoltgO2rCz7cVjdHfxtxkghg4opzyFvZeViu8FFzZa2oTzJcjHtMXno73r3zQew==",
+        "requested": "[3.7.300, )",
+        "resolved": "3.7.300",
+        "contentHash": "YX6s1rc5ONEQjUJT52bYl9RwWbHAzV6JmawlHf9U/n2hQgwm/EzXGw1+OuuEeDhcFfEsXhkNwBgZh7+/86PHdA==",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.204.15, 4.0.0)"
+          "AWSSDK.Core": "[3.7.300, 4.0.0)"
         }
       },
       "AWSSDK.ECS": {
         "type": "Direct",
-        "requested": "[3.7.201.37, )",
-        "resolved": "3.7.201.37",
-        "contentHash": "g7Q5IZnUCx2+K3xT7KsC7WoBDh1o4tpcakOa9Mw1KvKekK0Zvnzj7ZvRu8OiA+m+FtpNhkKfLn9mBpgoRSLYqA==",
+        "requested": "[3.7.300, )",
+        "resolved": "3.7.300",
+        "contentHash": "VoS28d0r9DeDPeO/Ux9xAAIwaf8+HtM6s30UwJ7VWKWmgwPnJ5k6aCDqJxRQc/msC//lyif/Byn/V/C9Mr7XYA==",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.204.15, 4.0.0)"
+          "AWSSDK.Core": "[3.7.300, 4.0.0)"
         }
       },
       "AWSSDK.S3": {
         "type": "Direct",
-        "requested": "[3.7.205.25, )",
-        "resolved": "3.7.205.25",
-        "contentHash": "3ArZMWKY6AdBdsOC7iYqb7bqj8jcxO8+WjaolcrLjYtTOl3npj3y6IS2f5reSZGAPmn3xgzU7L/cgekJexIp8w==",
+        "requested": "[3.7.300, )",
+        "resolved": "3.7.300",
+        "contentHash": "1m8dYqyPW3Z97OxY13w2uYsNUPYsYONATInT8FebeDpwXwtNWqzxGAcZlwzdVMWRvYOwymmvoTtACjmH8qUVHA==",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.204.15, 4.0.0)"
+          "AWSSDK.Core": "[3.7.300, 4.0.0)"
         }
       },
       "Microsoft.Extensions.Hosting": {
@@ -70,23 +70,23 @@
       },
       "AWSSDK.Core": {
         "type": "Transitive",
-        "resolved": "3.7.204.15",
-        "contentHash": "vjborZRu2OdTyuCRcu3qGtjyiodWCGkCb6USZdoCmVUap540HhANMTMkSNtHukhg7D60GqScylct1Y8HK+YZwA=="
+        "resolved": "3.7.300",
+        "contentHash": "Sf6Y3Ip44LUnTsFK2lz5heMThQQ4eYqN2u1xF/jA5K6uiXUeIHV4ISGb/reQ4MEOejiD15e+dtYy3Zebn4yXLw=="
       },
       "AWSSDK.ECR": {
         "type": "Transitive",
-        "resolved": "3.7.201.31",
-        "contentHash": "8QfOOOK1GlBmBycUb0E5zz645FCI3C1IPOXqnzxXnI0pLqQivkhNpOswj+PJ8VnHbhEPhRvJhviCoiQx8AlQQA==",
+        "resolved": "3.7.300",
+        "contentHash": "Nmu8FF0FzeDjrP/Smdi+XZaBGqyTEB+09a2fBPvIiBv5+VOLhJVuFvhbXYC5so+M0G9OMe0pX9L10xUUhqVdYg==",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.204.15, 4.0.0)"
+          "AWSSDK.Core": "[3.7.300, 4.0.0)"
         }
       },
       "AWSSDK.ECRPublic": {
         "type": "Transitive",
-        "resolved": "3.7.200.67",
-        "contentHash": "hFPrW2G2nQekGYSQrjrBlSzrf/ddUkqlUuU29XtgQyFPy4Q04EZX8RS3hE8C/43q5wRS5mgWlZu1NK6kFNiQDw==",
+        "resolved": "3.7.300",
+        "contentHash": "zkwtyBbeiaAQEglavX5FP4t16PJd6PkH8L4JPg/lIztkykEgjSqQ3TjCPaPFCjsM2ZbY2eB5MDOYtWbdV1LnIQ==",
         "dependencies": {
-          "AWSSDK.Core": "[3.7.204.15, 4.0.0)"
+          "AWSSDK.Core": "[3.7.300, 4.0.0)"
         }
       },
       "Microsoft.Extensions.Configuration": {
@@ -349,8 +349,8 @@
       "cicd.utils": {
         "type": "Project",
         "dependencies": {
-          "AWSSDK.ECR": "[3.7.201.31, )",
-          "AWSSDK.ECRPublic": "[3.7.200.67, )"
+          "AWSSDK.ECR": "[3.7.300, )",
+          "AWSSDK.ECRPublic": "[3.7.300, )"
         }
       }
     }
