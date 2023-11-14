@@ -9,6 +9,10 @@ footer {
     align-items: center;
     flex-wrap: wrap;
 
+    a {
+        color: white;
+    }
+
     .copyright {
         flex-basis: 100%;
         margin: 20px;
@@ -50,6 +54,6 @@ footer {
             }
         }
 
-       
+
     }
 }

@@ -1,6 +1,9 @@
+const DestinationAddress = "recitalblooms@gmail.com";
+const FormUrl = "https://commands.brigh.id/commands/email/execute/recaptcha";
+
 const submit = document.getElementById("submit");
 const form = document.getElementById("contact-form");
-const formState = { token: "", email: "", message: "" };
+const formState = { token: "", email: "", company: "", phone: "", message: "", name: "" };
 
 function onRecaptchaSubmit(token) {
     formState.token = token;
@@ -12,12 +15,17 @@ function onRecaptchaExpired() {
     submit.setAttribute("disabled", "disabled");
 }
 
-function readFormDataIntoState() {
-    const emailInput = document.getElementById("email-address");
-    formState.email = emailInput.value;
+function getInputValue(id) {
+    const input = document.getElementById(id)
+    return input.value;
+}
 
-    const messageInput = document.getElementById("message");
-    formState.message = messageInput.value;
+function readFormDataIntoState() {
+    formState.email = getInputValue("email-address");
+    formState.company = getInputValue("company");
+    formState.phone = getInputValue("phone");
+    formState.message = getInputValue("message");
+    formState.name = getInputValue("name");
 }
 
 function showThanksMessage() {
@@ -29,17 +37,17 @@ form.onsubmit = async function (event) {
     event.preventDefault();
     readFormDataIntoState();
 
-    const response = await fetch("https://commands.brigh.id/commands/email/execute/recaptcha", {
+    const response = await fetch(FormUrl, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
             "G-Recaptcha-Response": formState.token,
         },
         body: JSON.stringify({
-            To: "recitalblooms@gmail.com",
+            To: DestinationAddress,
             From: formState.email,
             Subject: "Recital Blooms Contact Form Submission",
-            Message: formState.message,
+            Message: `New Recital Blooms Contact Request:\n\nName: ${formState.name}\nEmail: ${formState.email}\nCompany: ${formState.company}\nPhone: ${formState.phone}\nMessage: ${formState.message}`,
         })
     });
 

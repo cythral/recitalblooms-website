@@ -1,19 +1,39 @@
 <form id="contact-form" action="#" method="POST">
 
     <h2>Contact Us:</h2>
-    
+    <p>To request our services for a fundraiser or event, please fill out the form below and we be in touch with you
+        shortly. Or give us a call at <a href="tel:5154006224">(515) 400-6224.</a></p>
+
+    <br />
+
     <div class="field">
         <label for="email-address">Email Address:</label>
-        <input type="email" id="email-address" name="email-address" placeholder="john@example.com" />
+        <input type="email" id="email-address" name="email-address" placeholder="john@example.com" required />
+    </div>
+
+    <div class="field">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="John Doe" required />
+    </div>
+
+    <div class="field">
+        <label for="company">Company:</label>
+        <input type="text" id="company" name="company" placeholder="Your Company" />
+    </div>
+
+    <div class="field">
+        <label for="phone">Phone:</label>
+        <input type="phone" id="phone" name="phone" placeholder="(111) 222-3333" required />
     </div>
 
     <div class="field">
         <label for="message">Message:</label>
-        <textarea id="message" name="message" placeholder="Message"></textarea>
+        <textarea id="message" name="message" placeholder="Message" required></textarea>
     </div>
 
     <div class="recaptcha-field">
-        <div class="g-recaptcha" data-sitekey="6LdemWYlAAAAAJvr-N1Qu2xFOhnvSVKMEf4TWlnQ" data-callback="onRecaptchaSubmit" data-expired-callback="onRecaptchaExpired"></div>
+        <div class="g-recaptcha" data-sitekey="6LdemWYlAAAAAJvr-N1Qu2xFOhnvSVKMEf4TWlnQ"
+            data-callback="onRecaptchaSubmit" data-expired-callback="onRecaptchaExpired"></div>
     </div>
 
     <div class="submit-field"><input id="submit" type="submit" value="submit" disabled class="btn" /></div>
