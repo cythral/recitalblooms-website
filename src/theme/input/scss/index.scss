@@ -257,6 +257,9 @@ form {
             flex-grow: 1;
             flex-basis: 20%;
             padding: 15px;
+            color: $primaryColor;
+            font-weight: bold;
+            border-bottom: 3px solid $primaryColor;
         }
 
         input,
@@ -353,7 +356,8 @@ aside {
 .aside-section {
 
     img {
-        width: 80%;
+        width: 50%;
+        margin-top: -20px;
     }
 
     img {
@@ -372,6 +376,60 @@ aside {
 
 .align-top {
     align-self: baseline;
+}
+
+.teddy-bear-pic {
+    width: 50%;
+    display: inline-block;
+    padding: 20px;
+    text-align: center;
+}
+
+.decrease-margins {
+    margin: -100px 0;
+}
+
+.field-collection {
+    display: flex;
+    flex-wrap: wrap;
+
+    .field {
+        flex-grow: 1;
+        flex-basis: calc(50% - 60px);
+
+        @media (max-width: $breakpoint-tablet) {
+            flex-basis: 100%;
+        }
+    }
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+
+    div,
+    img {
+        flex-basis: 50%;
+        flex-grow: 1;
+        width: 50%;
+
+        @media (max-width: $breakpoint-tablet) {
+            width: 100%;
+            flex-basis: 1;
+        }
+    }
+}
+
+.increase-margins {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.mini-bouquets {
+    ul {
+        margin-top: -20px;
+        margin-bottom: -20px;
+    }
 }
 
 @import "./header.scss";

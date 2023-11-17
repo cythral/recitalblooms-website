@@ -6,24 +6,28 @@
 
     <br />
 
-    <div class="field">
-        <label for="email-address">Email Address:</label>
-        <input type="email" id="email-address" name="email-address" placeholder="john@example.com" required />
+    <div class="field-collection">
+        <div class="field">
+            <label for="email-address">Email:</label>
+            <input type="email" id="email-address" name="email-address" placeholder="john@example.com" required />
+        </div>
+
+        <div class="field">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+        </div>
     </div>
 
-    <div class="field">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="John Doe" required />
-    </div>
+    <div class="field-collection">
+        <div class="field">
+            <label for="company">Company:</label>
+            <input type="text" id="company" name="company" placeholder="Your Company" />
+        </div>
 
-    <div class="field">
-        <label for="company">Company:</label>
-        <input type="text" id="company" name="company" placeholder="Your Company" />
-    </div>
-
-    <div class="field">
-        <label for="phone">Phone:</label>
-        <input type="phone" id="phone" name="phone" placeholder="(111) 222-3333" required />
+        <div class="field">
+            <label for="phone">Phone:</label>
+            <input type="phone" id="phone" name="phone" placeholder="(111) 222-3333" required />
+        </div>
     </div>
 
     <div class="field">
