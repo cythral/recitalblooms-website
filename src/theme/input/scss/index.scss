@@ -444,5 +444,11 @@ aside {
     }
 }
 
+.mobile-hide {
+    @media (max-width: $breakpoint-tablet) {
+        display: none;
+    }
+}
+
 @import "./header.scss";
 @import "./footer.scss";
