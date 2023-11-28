@@ -231,7 +231,7 @@ section {
         max-width: 500px;
 
         img {
-            border-radius: 100%;
+            border-radius: 50%;
             width: 100%;
         }
     }
@@ -240,9 +240,9 @@ section {
 .teddy-bear-pic {
     width: 50% !important;
     display: inline-block;
-    padding: 20px;
     border-radius: 50% !important;
     text-align: center;
+    vertical-align: baseline;
 
     @media (max-width: $breakpoint-tablet) {
         width: 100% !important;
@@ -395,6 +395,10 @@ aside {
 
 .decrease-margins {
     margin: -100px 0;
+}
+
+.no-margins {
+    margin: 0;
 }
 
 .field-collection {
