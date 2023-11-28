@@ -51,6 +51,7 @@ a {
     &:hover {
         background: $primaryColor;
         color: white;
+        text-decoration: none;
     }
 }
 
@@ -236,6 +237,18 @@ section {
     }
 }
 
+.teddy-bear-pic {
+    width: 50% !important;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 50% !important;
+    text-align: center;
+
+    @media (max-width: $breakpoint-tablet) {
+        width: 100% !important;
+    }
+}
+
 .no-border-radius {
     border-radius: 0;
 }
@@ -267,6 +280,7 @@ form {
             flex-grow: 1;
             flex-basis: 80%;
             padding: 15px;
+            border-radius: none !important;
             border: none;
             border-bottom: 3px solid $primaryColor;
         }
@@ -378,12 +392,6 @@ aside {
     align-self: baseline;
 }
 
-.teddy-bear-pic {
-    width: 50%;
-    display: inline-block;
-    padding: 20px;
-    text-align: center;
-}
 
 .decrease-margins {
     margin: -100px 0;
